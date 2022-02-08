@@ -660,6 +660,9 @@ constrain(Rectangle r, int inset) {
 		}
 	}
 
+	if (!sbest)
+		return r;
+
 	isect = insetrect(sbest->r, inset);
 	p = ZP;
 	p.x -= min(r.max.x - isect.min.x, 0);
