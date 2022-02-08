@@ -1,7 +1,7 @@
 # Customize below to fit your system
 
 # Paths
-PREFIX = /usr/local
+PREFIX = /opt/wmii
   BIN = $(PREFIX)/bin
   MAN = $(PREFIX)/share/man
   DOC = $(PREFIX)/share/doc/wmii
@@ -27,11 +27,11 @@ LD = cc
 # Archiver
 AR = ar crs
 
-PYTHON = python
+PYTHON = python2
 
 X11PACKAGES = x11 xinerama xrender xrandr
 INCX11 = $$(pkg-config --cflags $(X11PACKAGES))
-LIBIXP = $(LIBDIR)/libixp.a
+LIBIXP = /usr/lib/x86_64-linux-gnu/libixp.a
 
 # Enable RTLD. Only necessary for Xft support.
 CFLAGS += -DHAVE_RTLD
