@@ -18,7 +18,7 @@ TERMINAL = xterm
 
 # Flags
 include $(ROOT)/mk/gcc.mk
-CFLAGS += -Os $(DEBUGCFLAGS)
+CFLAGS += -Os $(DEBUGCFLAGS) -fcommon
 LDFLAGS += -g
 
 # Compiler, Linker. Linker should usually *not* be ld.
