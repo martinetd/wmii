@@ -190,7 +190,8 @@ Area*
 view_findarea(View *v, int screen, int idx, bool create) {
 	Area *a;
 
-	assert(screen >= 0 && screen < nscreens);
+	if (screen < 0 || screen >= nscreens)
+		return NULL;
 
 	for(a=v->areas[screen]; a && --idx > 0; a=a->next)
 		if(create && a->next == nil)
